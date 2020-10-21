@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    
+
+    <script>
+        var playerSelection = prompt("rock, paper or scissors?")
+        function computerPlay() {
+            const randomNumber = (Math.floor(Math.random() * 3))
+            if (randomNumber === 0){
+                return 'Rock';
+            }
+            else if (randomNumber === 1){
+                return 'Paper';
+            }
+            else if (randomNumber === 2){
+            return 'Scissor';
+            }
+        }
+        console.log(computerPlay());
+    
+        function playRound(playerSelection, computerSelection) {
+            if(playerSelection == "paper") {
+                if(computerSelection == "rock") {
+                    return "paper wins"
+                } else {
+                    if (computerSelection === "scissors") {
+                        return "scissors wins";
+                    }
+            }
+            if(playerSelection == "scissors") {
+                if(computerSelection == "rock") {
+                    return "rock wins";
+                } else {
+                    if (computerSelection == "paper") {
+                        return "scissors win";
+                    }
+                }
+            if(playerSelection == "scissors") {
+                if(computerSelection == "rock") {
+                    return "rock wins"
+                } else {
+                    if(computerSelection == "paper") {
+                        return "scissors wins";
+                    }
+    
+                }
+            }
+            playRound(playerSelection, computerSelection)
+        }
+        }
+    }
+        function game() {
+    
+        }
+       
+    </script>
+</body>
+
+</html>
